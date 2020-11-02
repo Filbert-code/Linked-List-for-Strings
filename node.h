@@ -1,11 +1,11 @@
 #ifndef NODE_H
 #define NODE_H
+#include <cstddef>
 
-template <class T>
 class Node
 {
 public:
-    T data;
-    Node<T> *next = NULL;
+    char data;
+    Node *next = NULL;
 };
 #endif

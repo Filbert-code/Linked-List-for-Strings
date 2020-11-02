@@ -3,7 +3,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
+    /*
+    SLLString str
+
+
     SLLString str("Hello world!");
     SLLString newStr = new SLLString;
 
@@ -22,6 +27,6 @@ int main(){
     
     newStr.erase('C');
     cout << newStr << endl; // Heo Word! S@B
-    
+    */
     return 0;
 }
