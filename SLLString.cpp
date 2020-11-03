@@ -3,7 +3,7 @@ using namespace std;
 
 SLLString::SLLString(const string &other)
 {
-    head = NULL;       // call the default constructor
+    head = NULL;   // call the default constructor
     Node *endNode; // keeps track of Node at the end of the linked list
 
     // get the last Node of the current linked list if the string is empty
@@ -86,7 +86,7 @@ SLLString &SLLString::operator=(const SLLString &other)
 
 int SLLString::length()
 {
-    return size;
+    return size + 1; // add 1 due to 0-indexing 
 }
 
 SLLString &SLLString::operator+=(const SLLString &other)
@@ -146,6 +146,7 @@ char &SLLString::operator[](const int n)
             break; // we found the character and can exit the loop
         }
         current = current->next;
+        index++;
     }
     return current->data;
 }
@@ -195,7 +196,8 @@ void SLLString::erase(char c)
             Node *temp = current->next;
             if (current->next->next != NULL)
             {
-                current->next = current->next->next;
+                while(current->next->data == c)
+                    current->next = current->next->next;
             }
             else
             {
@@ -208,4 +210,3 @@ void SLLString::erase(char c)
         current = current->next;
     }
 }
-    

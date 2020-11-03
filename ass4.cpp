@@ -5,37 +5,23 @@ using namespace std;
 
 int main()
 {
-    /*
-    SLLString str
 
-
-    SLLString str("Hello world!");
-    SLLString newStr = new SLLString;
-
-    newStr = str;
-    newStr += SLLString(" CS@BC");
-    newStr[6] = 'W';
-    
-    cout << newStr << endl; // Hello World! CS@BC
-    cout << newStr.length() << endl; //18
-    
-    int loc = newStr.findSubstring("World");
-    cout << loc << endl; // 6
-    
-    newStr.erase('l'); //erase the letter l.
-    cout << newStr << endl; // Heo Word! CS@BC
-    
-    newStr.erase('C');
-    cout << newStr << endl; // Heo Word! S@B
-    */
-
-    SLLString str("Hello world!");
+    SLLString str("Hello World!");
 
     SLLString newStr;
     newStr = str;
-    SLLString word("ALEXES");
-    newStr += word;
-    //newStr[6] = 'W';
-    cout << newStr;
+    newStr += SLLString("CS@BC");
+    newStr[6] = 'W';
+    cout << newStr << endl;
+    // sample prints 18 but should actually print 17 since there's
+    // no space between str and "CS@BC" in the code but it exists in the sample
+    cout << newStr.length() << endl;
+    int loc = newStr.findSubstring(SLLString("World"));
+    cout << loc << endl;
+    newStr.erase('l');
+    cout << newStr << endl;
+    newStr.erase('C');
+    cout << newStr << endl;
+
     return 0;
 }
