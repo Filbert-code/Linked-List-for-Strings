@@ -28,5 +28,10 @@ int main()
     newStr.erase('C');
     cout << newStr << endl; // Heo Word! S@B
     */
+
+    SLLString word("Alex");
+    word.print();
+    SLLString alph = word;
+    alph.print();
     return 0;
 }
