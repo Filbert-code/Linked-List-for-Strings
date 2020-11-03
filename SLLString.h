@@ -3,6 +3,7 @@
 #include "Node.h"
 #include <iostream>
 #include <string>
+#include <ostream>
 
 using namespace std;
 
@@ -20,18 +21,21 @@ public:
     SLLString &operator=(const SLLString &other);
     int length();
     SLLString &operator+=(const string &other);
-
-
-    void print()
+    char &operator[](const int n); // get character at index n
+    // find the index of the first occurrence of substring in the current string. Returns -1 if not found.
+    int findSubstring(const SLLString &substring);
+    void erase(char c); // erase all occurances of character c from the current string.
+    friend ostream &operator<<(ostream &output, SLLString &s)
     {
-        Node *current = head;
-        cout << "Head->";
+        Node *current = s.head;
+        output << "Head->";
         while (current != NULL)
         {
-            cout << current->data << "->";
+            output << current->data << "->";
             current = current->next;
         }
-        cout << "NULL" << endl;
+        output << "NULL" << endl;
+        return output;
     }
 };
 
