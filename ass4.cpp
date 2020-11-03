@@ -29,11 +29,13 @@ int main()
     cout << newStr << endl; // Heo Word! S@B
     */
 
-    SLLString word("lAlexander Filbertl");
-    SLLString sub("coolest");
-    cout << word.findSubstring(sub) << endl;
-    cout << word << endl;
-    word.erase('l');
-    cout << word << endl;
+    SLLString str("Hello world!");
+
+    SLLString newStr;
+    newStr = str;
+    SLLString word("ALEXES");
+    newStr += word;
+    //newStr[6] = 'W';
+    cout << newStr;
     return 0;
 }

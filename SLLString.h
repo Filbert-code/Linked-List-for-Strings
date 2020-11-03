@@ -20,7 +20,7 @@ public:
     SLLString(const SLLString &other);
     SLLString &operator=(const SLLString &other);
     int length();
-    SLLString &operator+=(const string &other);
+    SLLString &operator+=(const SLLString &other);
     char &operator[](const int n); // get character at index n
     // find the index of the first occurrence of substring in the current string. Returns -1 if not found.
     int findSubstring(const SLLString &substring);
