@@ -42,7 +42,6 @@ SLLString::SLLString(const string &other)
 
 SLLString::~SLLString()
 {
-    cout << "Deleting String..." << endl;
     Node *current = head;
     while (current->next != NULL)
     {
@@ -86,7 +85,7 @@ SLLString &SLLString::operator=(const SLLString &other)
 
 int SLLString::length()
 {
-    return size + 1; // add 1 due to 0-indexing 
+    return size + 1; // add 1 due to 0-indexing
 }
 
 SLLString &SLLString::operator+=(const SLLString &other)
@@ -196,7 +195,7 @@ void SLLString::erase(char c)
             Node *temp = current->next;
             if (current->next->next != NULL)
             {
-                while(current->next->data == c)
+                while (current->next->data == c)
                     current->next = current->next->next;
             }
             else

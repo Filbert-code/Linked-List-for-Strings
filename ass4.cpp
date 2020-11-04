@@ -22,6 +22,7 @@ int main()
     cout << newStr << endl;
     newStr.erase('C');
     cout << newStr << endl;
+    
 
     return 0;
 }
