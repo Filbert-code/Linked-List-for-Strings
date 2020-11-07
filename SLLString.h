@@ -33,13 +33,11 @@ public:
     friend ostream &operator<<(ostream &output, SLLString &s)
     {
         Node *current = s.head;
-        output << "Head->";
         while (current != NULL)
         {
-            output << current->data << "->";
+            output << current->data;
             current = current->next;
         }
-        output << "NULL";
         return output;
     }
 };

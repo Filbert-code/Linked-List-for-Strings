@@ -15,13 +15,11 @@ int main()
     SLLString newStr;
     newStr = str;
 
-    newStr += SLLString("CS@BC");
+    newStr += SLLString(" CS@BC");
     newStr[6] = 'W';
 
     cout << newStr << endl;
 
-    // sample prints 18 but should actually print 17 since there's
-    // no space between str and "CS@BC" in the code but it exists in the sample
     cout << newStr.length() << endl;
 
     int loc = newStr.findSubstring(SLLString("World"));
