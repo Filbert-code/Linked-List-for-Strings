@@ -4,14 +4,13 @@
 // Assignment: Homework 4
 #include <iostream>
 #include "SLLString.h"
-#include "SLLString.cpp"
 
 using namespace std;
 
 int main()
 {
 
-    SLLString str("Hello World!");
+    SLLString str("Hello world!");
 
     SLLString newStr;
     newStr = str;
